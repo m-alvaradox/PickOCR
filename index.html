@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>PickOCR</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="content">
+    <header>
+      <h1> PickOCR </h1>
+    </header>
+  </div>
+
+  <h2>Escanear Productos</h2>
+
+  <div style="margin: 20px 0;">
+    <input type="file" accept="image/*" id="inputImagen" style="display:none" onchange="procesarImagen(event)">
+    <button class="btn-control btn-iniciar" onclick="document.getElementById('inputImagen').click()">
+      Subir Foto  <img src = "resources/upload_foto.png" alt="upload_foto" style="height: 25px; vertical-align: middle;"></button>
+    <button class="btn-control btn-limpiar" onclick="limpiarTabla()">
+      Limpiar Registros  <img src = "resources/clean.png" alt="clean_ico" style="height: 25px; vertical-align: middle;"></button>
+  </div>
+
+  <canvas id="canvas" style="margin-top: 20px;"></canvas>
+  <div id="mensaje"></div>
+
+  <h3>Productos escaneados</h3>
+  <table id="tablaProductos">
+    <thead>
+      <tr>
+        <th>Codigo</th>
+        <th>Precio</th>
+        <th>Fecha de escaneo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="valorTotal">Valor total: <span>0 USD</span></div>
+
+  <button class="btn-control btn-exportar" onclick="exportarExcel()">
+    <img src = "resources/cloud.png" alt="upload_cloud" style="height: 25px; vertical-align: middle;"> Enviar a Drive</button>
+  <button class="btn-control btn-download" onclick="exportarExcel_local()">
+    <img src = "resources/download.png" alt="Descargar" style="height: 25px; vertical-align: middle;"> Descargar
+  </button>
+
+  <script src="script.js"></script>
+
+  <div class="footer">
+    &copy; 2025 PickOCR - Mario Alvarado
+  </div>
+</body>
+</html>

@@ -137,13 +137,16 @@ async function procesarOCR(imageData) {
   for (let i = 0; i < palabras.length; i++) {
     const palabra = palabras[i];
 
-    if ((palabra.includes('valor') || palabra.includes('USD')) && !valor)
+    if ((palabra.includes('codigo') && !codigo))
+      codigo = extraerNumeroCercano(palabras, i);
+
+    if ((palabra.includes('precio') || palabra.includes('USD')) && !valor)
       valor = extraerNumeroCercano(palabras, i);
 
-    if (/^\d{10}$/.test(palabra)) {
-      codigo = palabra;
-    }
   }
+
+  console.log(codigo)
+  console.log(valor)
 
   if (codigo && valor) {
     const confirmar = confirm(`¿Registrar producto con estos datos?\n\ncodigo: ${codigo}\nvalor: ${valor}`);

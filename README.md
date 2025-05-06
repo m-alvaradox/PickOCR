@@ -1,7 +1,42 @@
-# PickOCR
+# 🧾 PickOCR
 https://m-alvaradox.github.io/PickOCR/
 
-DEMO:
+**PickOCR** es una herramienta web que permite escanear productos desde imágenes o fotos y extraer automáticamente su código y precio mediante tecnología OCR. Está diseñada para facilitar el registro dinámico de productos y generar reportes fácilmente exportables.
+
+## 📲 ¿Qué hace PickOCR?
+
+- 📷 Escanea imágenes o fotos de etiquetas
+- 🔍 Extrae automáticamente el **código del producto** y su **precio**
+- 📝 Registra los datos en una **tabla dinámica**
+- 📤 Permite **descargar los datos en Excel** o **subirlos a Google Drive**
+- 🧹 Incluye funcionalidades para limpiar los datos o subir nuevas imágenes
+
+## 🛠️ Tecnologías utilizadas
+
+### Frontend
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+
+### OCR
+- **Google Cloud Vision API**
+
+### Backend / Integraciones
+- **Google Drive API** (para subida directa del archivo)
+- **SheetJS (xlsx.js)** para generación del archivo Excel
+
+## ⚙️ Funcionalidades
+
+- Escaneo OCR de imagen base64
+- Extracción y procesamiento del texto para identificar:
+  - Código del producto
+  - Precio (USD)
+- Tabla editable con opción para eliminar registros
+- Botones:
+  - 🧹 Limpiar datos
+  - 📥 Descargar archivo Excel
+  - ☁️ Subir archivo a Google Drive
+
 
 1. Página Principal PickOCR
    

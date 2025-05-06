@@ -145,9 +145,6 @@ async function procesarOCR(imageData) {
 
   }
 
-  console.log(codigo)
-  console.log(valor)
-
   if (codigo && valor) {
     const confirmar = confirm(`¿Registrar producto con estos datos?\n\ncodigo: ${codigo}\nvalor: ${valor}`);
     if (confirmar) {

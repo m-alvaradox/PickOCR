@@ -1,5 +1,4 @@
 # 🧾 PickOCR
-https://m-alvaradox.github.io/PickOCR/
 
 **PickOCR** es una herramienta web que permite escanear productos desde imágenes o fotos y extraer automáticamente su código y precio mediante tecnología OCR. Está diseñada para facilitar el registro dinámico de productos y generar reportes fácilmente exportables.
 
